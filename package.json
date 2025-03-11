@@ -1,0 +1,22 @@
+{
+  "name": "casse-le-vase",
+  "version": "1.0.0",
+  "description": "Ce projet implémente une solution optimisée pour trouver l'étage où un vase se brise lorsqu'il est lancé depuis différents étages dans un bâtiment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "dev": "npx ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "ts-jest": "^29.2.6",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "consola": "^3.4.0"
+  }
+}
