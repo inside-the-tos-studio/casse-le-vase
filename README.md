@@ -1,17 +1,18 @@
 # Vase Challenge - (un peu de JS et de TS)
 
-Une entreprise a créé **des vases ultra résistants** et nous demande de tester sa résistance aux chocs **lorsqu'il tombe de très haut**. Pour réaliser ce test, vous êtes dans un immeuble disposant d'un nombre d'étages fixe (par ex: 100).
-Le but est donc de créer une fonction nous indiquant l'étage limite ou le vase se casse.
+Une entreprise a créé **des vases ultra-résistants** et nous demande de tester leur résistance aux chocs **lorsqu'ils tombent de très haut**. Pour réaliser ce test, vous êtes dans un immeuble disposant d'un nombre d'étages fixe (par exemple : 100).
+Le but est donc de créer une fonction nous indiquant l'étage limite où le vase se casse.
 
 ## Mission
 
 Ta mission, si tu l'acceptes, sera de trouver de manière optimisée (le moins d'itérations possibles) à quel étage le vase casse lorsqu'on le jette par la fenêtre.
 
+
 ### Exemple:
 1. 1ere itération: Etage 1 - le vase ne casse pas. ✅
 1. 2eme itération: Etage 2 - le vase ne casse pas. ✅
 1. 3eme itération: Etage 3 - le vase ne casse pas. ✅
-...
+1. ...
 89. 89eme itération: Etage 89 - le vase se casse. ❌
 
 ### TO DO
