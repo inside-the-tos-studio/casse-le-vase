@@ -6,30 +6,24 @@ type Props = {
   essais: number;
 }
 
-export const algorythme = (totalFloors: number, floorLimit: number): Props => {
-  let minimum: number = 1;
-  let nombreMedian: number = 0;
-  let essais: number = 0;
+export const algorythme = (totalFloors: number, vase: Vase): Props => {
+  let floor = 1;
+  let maximumFloors = totalFloors;
+  let essais = 0;
 
-  while (minimum <= totalFloors) {
-    nombreMedian = Math.floor((minimum + totalFloors) / 2);
-    essais++;
+  while (floor < maximumFloors) {
+    const nombreMedian = Math.floor((floor + maximumFloors) / 2);
 
-    if (nombreMedian === floorLimit) {
-      return {
-        floor: nombreMedian,
-        essais: essais,
-      }
-    }
-    if (nombreMedian < floorLimit) {
-      minimum = nombreMedian + 1;
-    }
-    if (nombreMedian > floorLimit) {
-      totalFloors = nombreMedian - 1;
+    if (vase.throwVase(nombreMedian).isBroken) {
+      floor = nombreMedian + 1;
+      essais++
+    } else {
+      maximumFloors = nombreMedian;
+      essais++
     }
   }
 
-  throw new Error('Floor not found');
+  return { floor, essais };
 }
 
 /**
@@ -41,8 +35,7 @@ export const algorythme = (totalFloors: number, floorLimit: number): Props => {
  */
 export function findVaseFloorBreaker(totalFloors: number, vase: Vase) {
   // Let's make the magic here
-  const floorLimit = vase.getFloorLimit();
-  const result = algorythme(totalFloors, floorLimit);
+  const result = algorythme(totalFloors, vase);
 
   return result;
 } 
